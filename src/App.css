@@ -1,0 +1,82 @@
+body {
+  background-color: var(--background);
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #000000;
+  filter: url(#noiseOverlay);
+  opacity: 20%;
+
+  pointer-events: none;
+}
+
+/* .overlay { */
+/*   position: absolute; */
+/*   mask-image: url(./assets/fullMask.svg); */
+/*   mask-size: contain, unset; */
+/*   mask-position: center, unset; */
+/*   mask-repeat: no-repeat; */
+/*   mask-size: cover, 200px; */
+/*   mask-composite: exclude; */
+/* } */
+/**/
+/* svg { */
+/*   width: 100%; */
+/*   height: 100%; */
+/*   position: fixed; */
+/*   top: 0; */
+/*   left: 0; */
+/* } */
+
+.grayscale-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: contrast(500%) grayscale(80%) invert(15%) brightness(50%) sepia(100%) hue-rotate(-15deg);
+  width: 100vw;
+  height: 100vh;
+  mask-image: url(#mask);
+
+  pointer-events: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .grayscale-mask {
+    backdrop-filter: contrast(1000%) grayscale(80%) invert(95%) brightness(45%) sepia(100%);
+  }
+}
+
+/* .rect { */
+/*   filter: url(#grayscale-filter); */
+/*   backdrop-filter: grayscale(100%); */
+/* } */
+
+.mask-circle {
+  filter: url(#turbulenceFilter) url(#noiseFilter);
+  /* transition: transform 1s, opacity 1s; */
+  /* transform: scale(1); */
+  transition: r .3s ease-in-out 0s;
+}
+
+.mask-circle.stopped {
+  /* transform: scale(.8); */
+  /* opacity: 0; */
+  transition: r 1s ease-in 1s;
+}
+
+/* .mask-circle.stopped { */
+/*   scale: 0; */
+/* } */
+/**/
+/* .grid-element { */
+/*   filter: url(#noiseFilter); */
+/*   mask-image: url(#mask); */
+/* } */
