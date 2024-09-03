@@ -10,7 +10,7 @@ const useMousePosition = () => {
     clearTimeout(timerRef.current);
     setMousePosition({ x: e.clientX, y: e.clientY});
     setStopped(false);
-    timerRef.current = setTimeout(onMouseStop, 300);
+    timerRef.current = setTimeout(onMouseStop, 600);
   };
 
   const onMouseStop = () => {

@@ -1,3 +1,14 @@
+/*
+@keyframes pulse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+*/
+
 body {
   background-color: var(--background);
   position: relative;
@@ -45,7 +56,9 @@ body::after {
   height: 100vh;
   mask-image: url(#mask);
 
-  pointer-events: none;
+  /* mix-blend-mode: multiply; */
+
+  /* pointer-events: none; */
 }
 
 @media (prefers-color-scheme: light) {
@@ -54,6 +67,10 @@ body::after {
   }
 }
 
+/* .title { */
+/*   mix-blend-mode: overlay; */
+/* } */
+/**/
 /* .rect { */
 /*   filter: url(#grayscale-filter); */
 /*   backdrop-filter: grayscale(100%); */
@@ -63,15 +80,20 @@ body::after {
   filter: url(#turbulenceFilter) url(#noiseFilter);
   /* transition: transform 1s, opacity 1s; */
   /* transform: scale(1); */
-  transition: r .3s ease-in-out 0s;
+  transition: r .5s ease-in-out 0s;
+  /* animation: rotate 1s linear infinite; */
 }
 
 .mask-circle.stopped {
   /* transform: scale(.8); */
   /* opacity: 0; */
-  transition: r 1s ease-in 1s;
+  transition: r 2s ease-in 1.5s;
 }
 
+/* .hero { */
+/*   mask-image: url(#mask); */
+/* } */
+/**/
 /* .mask-circle.stopped { */
 /*   scale: 0; */
 /* } */
