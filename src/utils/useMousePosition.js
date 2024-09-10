@@ -32,7 +32,7 @@ const useMousePosition = () => {
 
       timerRef.current = setTimeout(onMouseStop, 600);
     }
-  }, 25), []);
+  }, 100), []);
 
   const onMouseStop = () => {
     // if (!hovered) {
@@ -65,10 +65,10 @@ const useMousePosition = () => {
 
   const handleMouseLeave = useCallback(() => {
     isHovered.current = false;
-    isAnimating.current = true;
-    setTimeout(() => {
-      isAnimating.current = false;
-    }, 500);
+    // isAnimating.current = true;
+    // setTimeout(() => {
+    //   isAnimating.current = false;
+    // }, 500);
   });
 
   useEffect(() => {
