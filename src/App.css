@@ -67,28 +67,47 @@ body::after {
   }
 }
 
-/* .title { */
-/*   mix-blend-mode: overlay; */
+/* .hero::before { */
+/*   content: ""; */
+/*   position: absolute; */
+/*   top: 0; */
+/*   left: 0; */
+/*   width: 100%; */
+/*   height: 100%; */
+/*   z-index: -9999; */
+/*   background: #000000; */
+/*   filter: url(#noiseOverlay); */
+/*   opacity: 20%; */
+/*   pointer-events: none; */
 /* } */
 /**/
 /* .rect { */
 /*   filter: url(#grayscale-filter); */
 /*   backdrop-filter: grayscale(100%); */
 /* } */
-
+/**/
 .mask-circle {
   filter: url(#turbulenceFilter) url(#noiseFilter);
   /* transition: transform 1s, opacity 1s; */
   /* transform: scale(1); */
-  transition: r .5s ease-in-out 0s;
+  /* transition: r .5s ease-in-out 0s; */
+  transition-behavior: allow-discrete;
+  will-change: cy, cx, r;
   /* animation: rotate 1s linear infinite; */
 }
 
-.mask-circle.stopped {
+/* .mask-circle.stopped { */
   /* transform: scale(.8); */
   /* opacity: 0; */
-  transition: r 2s ease-in 1.5s;
-}
+/*   transition: r 2s ease-in 1.5s; */
+/* } */
+
+/* .mask-circle.hovered { */
+  /* transform: scale(1.2); */
+  /* opacity: 1; */
+/*   transition-property: cy, cx, r; */
+/*   transition: .7s ease-out 0s; */
+/* } */
 
 /* .hero { */
 /*   mask-image: url(#mask); */

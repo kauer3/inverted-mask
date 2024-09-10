@@ -3,11 +3,11 @@ import Sphere from "./Sphere";
     // <div className="relative flex flex-col gap-6 items-center justify-center text-foreground group transition-all duration:1000 ease-in after:w-full after:h-full after:absolute after:z-1000 after:bg-accent">
 
 const Hero = () => (
-  <header className="flex flex items-center justify-around min-h-[50vh]">
+  <header className="header flex flex items-center justify-around min-h-[50vh]">
 
     <Sphere/>
 
-    <div className="hero flex flex-col gap-6 items-center justify-center text-foreground group transition-all duration:1000 ease-in">
+    <div className="hero highlight flex flex-col gap-6 items-center justify-center text-foreground group transition-all duration:1000 ease-in">
       <h1 className="title w-max font-black text-8xl text-center">Hello, World!</h1>
       <p className="w-max text-center font-semibold text-2xl">Welcome to my <span className="text-secondary italic hover:text-accent">grainy</span> website</p>
       <p className="w-max text-center font-semibold text-2xl">

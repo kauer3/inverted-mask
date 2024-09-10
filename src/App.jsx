@@ -7,6 +7,7 @@ import Hero from './components/Hero'
 function App() {
   return (
     <>
+      {/*<div className="gooey-overlay"/>*/}
       <FullMask/>
       <Hero />
       <Grid />
