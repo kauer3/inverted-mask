@@ -18,11 +18,11 @@ const MaskSvg = () => {
           <feDisplacementMap in2="noise" scale="100" xChannelSelector="R" yChannelSelector="G" />
         </filter>
 
+      </defs>
         <mask id="mask" x="0" y="0" width="100%" height="100%">
           <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
           <SvgCircle/>
         </mask>
-      </defs>
     </svg>
   )
 };

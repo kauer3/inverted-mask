@@ -7,7 +7,7 @@ const SvgCircle = () => {
 
   const springConfig = {
     stiffness: 100,
-    damping: status == 'hovered' ? 10 : 20,
+    damping: status == 'hovered' ? 7 : 20,
     mass: 1,
     restSpeed: 0.5,
     restDelta: 0.5
@@ -26,11 +26,12 @@ const SvgCircle = () => {
 
   return (
     <motion.circle
+      id="maskCircle"
       animate={{ r: r }}
       initial={{ r: 0 }}
       cx={cx}
       cy={cy}
-      fill="#000000"
+      // fill="#000000"
       className={`mask-circle`}
       transition={{
         type: "tween",

@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       {/*<div className="gooey-overlay"/>*/}
+      <div className="cover bg-background"/>
       <FullMask/>
       <Hero />
       <Grid />

@@ -51,7 +51,7 @@ body::after {
   position: absolute;
   top: 0;
   left: 0;
-  backdrop-filter: contrast(500%) grayscale(80%) invert(15%) brightness(50%) sepia(100%) hue-rotate(-15deg);
+  backdrop-filter: contrast(500%) grayscale(80%) invert(20%) brightness(50%) sepia(20%) hue-rotate(-200deg);
   width: 100vw;
   height: 100vh;
   mask-image: url(#mask);
@@ -96,6 +96,41 @@ body::after {
   /* animation: rotate 1s linear infinite; */
 }
 
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  mask-image: url(#mask);
+  /* mask-size: cover; */
+  /* mask-position: center; */
+  /* mask-repeat: no-repeat; */
+  /* mask-composite: exclude; */
+  z-index: -999;
+}
+
+.hide {
+  z-index: -1000;
+}
+
+.title {
+  text-shadow: 5px 5px var(--primary);
+}
+
+.title:hover {
+  color: var(--accent);
+  text-shadow: 5px 5px var(--red);
+}
+
+/* .hide { */
+/*   clip-path: url(#clip); */
+/* } */
+/**/
+/* #maskCircle, #clip, #mask { */
+/*   transform-origin: center center; */
+/* } */
+/**/
 /* .mask-circle.stopped { */
   /* transform: scale(.8); */
   /* opacity: 0; */
